@@ -128,14 +128,23 @@ nav ul li a.active {
     color: var(--primary-color);
 }
 
+.btn-contact.active {
+    color: white;
+}
+
 .btn-contact {
     background-color: var(--primary-color);
     padding: 8px 15px;
     border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    border: 1px solid var(--primary-color);
 }
 
 .btn-contact:hover {
-    background-color: #c61616;
+    background-color: transparent;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(231, 28, 28, 0.2);
 }
 
 /* Hero Section */
