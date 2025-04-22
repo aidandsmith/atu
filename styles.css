@@ -264,6 +264,17 @@ nav ul li a.active {
     transition: all 0.3s ease;
 }
 
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
 .service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -273,6 +284,7 @@ nav ul li a.active {
     position: absolute;
     top: 15px;
     left: 15px;
+    z-index: 2;
 }
 
 .card-logo img {
@@ -285,10 +297,14 @@ nav ul li a.active {
     font-size: 1.5rem;
     margin-bottom: 15px;
     line-height: 1.2;
+    position: relative;
+    z-index: 2;
 }
 
 .service-card .btn {
     align-self: flex-start;
+    position: relative;
+    z-index: 2;
 }
 
 /* Why Choose Us Section */
@@ -313,7 +329,7 @@ nav ul li a.active {
 .qualities {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 70px;
     flex-wrap: wrap;
 }
 
@@ -326,12 +342,17 @@ nav ul li a.active {
 .quality-icon {
     width: 90px;
     height: 90px;
-    background-color: var(--light-color);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 50%;
     margin-bottom: 15px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quality-icon i {
+    font-size: 40px;
+    color: var(--primary-color);
 }
 
 .quality h3 {
@@ -498,7 +519,7 @@ footer {
     }
     
     .qualities {
-        gap: 25px;
+        gap: 40px;
     }
     
     .footer-bottom {
